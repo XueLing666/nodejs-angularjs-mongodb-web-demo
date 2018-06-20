@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>User-Profile</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+	<div class="container" ng-controller="myController">
+		<h3 class="text-center page-header">User Profile</h3>
+		<form class="form-horizontal" action="/user/update" method='POST' role='form'>
+			<div class="form-group">
+    			<label for="username" class="col-sm-3 control-label">Username</label>
+    			<div class="col-sm-7">
+      				<input type="text" class="form-control" name="username" placeholder="username" id='username' ng-model='user.username' disabled />
+    			</div>
+ 			</div>
+ 			<div class="form-group">
+    			<label for="email" class="col-sm-3 control-label">Email</label>
+    			<div class="col-sm-7">
+      				<input type="email" class="form-control" name="email" placeholder="email" ng-model='user.email' id='email' />
+    			</div>
+ 			</div>
+ 			<div class="form-group">
+    			<label for="color" class="col-sm-3 control-label">Favorite Color</label>
+    			<div class="col-sm-7">
+      				<input type="text" class="form-control" name="color" placeholder="Color" id='color' ng-model="user.color" />
+    			</div>
+ 			</div>
+ 			
+			<div class="form-group">
+			    <div class="text-center">
+			      <button type="submit" class="btn btn-primary">Save</button>
+			    </div>
+  			</div>
+		</form>
+
+		<form method="POST" action="/user/delete" class="text-center">
+			<input type="submit" value="Delete User" class="btn btn-default">
+		</form>
+	<hr>
+		<p class="msg"><%=msg%></p>
+	<hr>
+	{{error}}
+	</div>
+
+	<script src="../static/js/angular.min.js"></script>
+	<script src="../static/js/my_app.js"></script>
+</body>
+</html>

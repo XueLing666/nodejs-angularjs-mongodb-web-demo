@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+	<div ng-controller='myController'>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="nav navbar-text navbar-right">
+				<a href="/logout">Logout</a>
+				<a href="/user">Edit User</a>
+			</div>
+		</div>
+		<div>
+			<h2 class="welcome-h2">「 Welcome ! 」</h2>
+			<p class="welcome-p">You are Logged as <%= username %></p>
+		</div>
+	</div>
+	<hr>
+	<p class="msg"><%= msg %></p>
+	<hr>
+	<script src="../static/js/angular.min.js"></script>
+	<script src="../static/js/my_app.js"></script>
+</body>
+</html>

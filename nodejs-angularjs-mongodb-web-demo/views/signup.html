@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Signup</title>
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<h3 class="text-center page-header">Sign Up</h3>
+		<form class="form-horizontal" method='POST' role='form'>
+			<div class="form-group">
+    			<label for="username" class="col-sm-3 control-label">Username</label>
+    			<div class="col-sm-7">
+      				<input type="text" class="form-control" name="username" placeholder="username" id="username" required />
+    			</div>
+ 			</div>
+ 			<div class="form-group">
+    			<label for="password" class="col-sm-3 control-label">Password</label>
+    			<div class="col-sm-7">
+      				<input type="password" class="form-control" name="password" placeholder="password" id="password" required />
+    			</div>
+ 			</div>
+ 			<div class="form-group">
+    			<label for="email" class="col-sm-3 control-label">Email</label>
+    			<div class="col-sm-7">
+      				<input type="email" class="form-control" name="email" placeholder="email" id="email" required />
+    			</div>
+ 			</div>
+			<div class="form-group">
+			    <div class="text-center">
+			      <button type="submit" class="btn btn-primary">Register</button>
+			    </div>
+  			</div>
+		</form>
+	</div>
+	<hr>
+	<p class="msg"><%=msg%></p>
+	<hr>
+</body>
+</html>
